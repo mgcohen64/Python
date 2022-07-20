@@ -1,6 +1,7 @@
 
 from os import path
 
+# Funcion que escribe una frase dada como parametro en el archivo dado como parametro
 def escribe_archivo(frase_nueva,archivo_frases):
     if path.exists(archivo_frases):
         f = open (archivo_frases,'a')
@@ -9,6 +10,7 @@ def escribe_archivo(frase_nueva,archivo_frases):
     f.write(frase_nueva +"\n")
     f.close
 
+# Lee el archivo para contar cantidad de frases y palabras que contiene
 def lee_archivo(archivo_frases):
     cant_palabras=0
     cant_frases=0
@@ -27,6 +29,7 @@ print("Programa contador de frases y palabras")
 print("Ingrese \"the end\" para salir\n")
 frase=str(input("Ingrese frase: "))
 
+# Se ingresan frases mientras no se ingrese "the end"
 while frase != "the end":
     escribe_archivo(frase,"phrases.txt")
     frase=str(input("Ingrese frase: "))
