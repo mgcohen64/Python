@@ -3,7 +3,8 @@ from tkinter import *
 from tkinter import messagebox
 from tkinter import ttk
 import tkinter as tk
-from turtle import left
+from tkinter.font import BOLD
+from turtle import color, left
 
 
 def genera_clave():
@@ -39,13 +40,13 @@ def genera_clave():
 # Crea una ventana de 300 x 300 con titulo Password Generator    
 root = Tk()
 root.title("Password Generator")
-root.geometry("300x300")
+root.geometry("300x250")
 
 # Crea una ventana para mostrar la clave generada
 ventana=ttk.Entry()
 ventana=ttk.Entry(justify=tk.CENTER)
-ventana.configure(font=("Arial", 12))
-ventana.place(x=80, y=130, width=145, height=20)
+ventana.configure(font=("Arial", 11),foreground="red")
+ventana.place(x=60, y=130, width=180, height=20)
 
 minusculas=1
 mayusculas=1
@@ -78,7 +79,7 @@ Label(root, text = "Longitud").place(x = 20,y = 100)
 # Crea una variable para el ingreso inicilizada en 10
 longitud=IntVar(value = 10)
 # Crea el campo para ingresar la variable longitud
-Entry(root,textvariable=longitud).place(x = 80, y = 100)
+Entry(root,textvariable=longitud, bd =3, width=5).place(x = 80, y = 100)
 
 # Crea un boton para generar la clave
 boton_generar=Button(root, text='Generar', command=lambda:genera_clave())
