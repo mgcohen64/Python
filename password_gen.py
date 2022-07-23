@@ -14,10 +14,10 @@ except ValueError:
     longitud=16
 
 # No es necesario usar la funcion 'str' dado que por defecto el tipo de dato devuelto por 'input()' es un string
-minusculas=str(input("Incluir minusculas (s/n): "))
-mayusculas=str(input("Incluir mayusculas (s/n): "))
-especiales=str(input("Incluir especiales (s/n): "))
-numeros=str(input("Incluir numeros (s/n): "))
+minusculas=(input("Incluir minusculas (s/n): "))
+mayusculas=(input("Incluir mayusculas (s/n): "))
+especiales=(input("Incluir especiales (s/n): "))
+numeros=(input("Incluir numeros (s/n): "))
 
 if minusculas == "s" or minusculas == "S":
     lista = lista + listaminusculas
