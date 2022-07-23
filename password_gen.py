@@ -13,7 +13,6 @@ try:
 except ValueError:
     longitud=16
 
-# No es necesario usar la funcion 'str' dado que por defecto el tipo de dato devuelto por 'input()' es un string
 minusculas=(input("Incluir minusculas (s/n): "))
 mayusculas=(input("Incluir mayusculas (s/n): "))
 especiales=(input("Incluir especiales (s/n): "))
@@ -27,8 +26,9 @@ if numeros == "s" or numeros == "S":
     lista = lista + listanumeros
 if especiales == "s" or especiales == "S":
     lista = lista + listaespeciales
-
-# Falta tener una lista por defecto en caso de que el usuario no elija nungun criterio
+if (minusculas != "s" or minusculas !="S") and (mayusculas != "s" or mayusculas !="S") and (especiales != "s" or especiales !="S") and (numeros != "s" or numeros !="S"):
+    lista = listaminusculas + listamayusculas + listanumeros + listaespeciales
+    
 for i in range (1,longitud,1):
     password +=(random.choice(lista))
 print(f"Contraseña: {password}")
