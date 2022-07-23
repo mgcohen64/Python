@@ -28,6 +28,9 @@ def genera_clave():
     if especiales.get() == 1:
         lista = lista + listaespeciales
     
+    if minusculas.get() + mayusculas.get() + numeros.get() + especiales.get() == 0:
+        lista = listaminusculas + listamayusculas + listanumeros + listaespeciales
+    
     # De acuerdo al valor de longitud, se genera un caracter aleatoriamente y se lo guarda en password
     for i in range (0,largo,1):
         password +=(random.choice(lista))
@@ -45,7 +48,7 @@ root.geometry("300x250")
 # Crea una ventana para mostrar la clave generada
 ventana=ttk.Entry()
 ventana=ttk.Entry(justify=tk.CENTER)
-ventana.configure(font=("Arial", 11),foreground="red")
+ventana.configure(font=("Arial", 10),foreground="red")
 ventana.place(x=60, y=130, width=180, height=20)
 
 minusculas=1
@@ -77,7 +80,7 @@ c4.select()
 # Crea una etiqueta con texto "Longitud" para ingresar el largo de la clave. Le asigna una variable longitud
 Label(root, text = "Longitud").place(x = 20,y = 100)
 # Crea una variable para el ingreso inicilizada en 10
-longitud=IntVar(value = 10)
+longitud=IntVar(value = 16)
 # Crea el campo para ingresar la variable longitud
 Entry(root,textvariable=longitud, bd =3, width=5).place(x = 80, y = 100)
 
