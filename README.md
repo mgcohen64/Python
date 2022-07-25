@@ -59,6 +59,4 @@ registro).
 
 # Correcciones
 
-- Ejecicio __'generador de contraseñas'__: Debe permitir que el usuario no ingrese ningun criterio de eleccion para la contraseña y que devuelva una contraseña con criterios por defecto.
-
-Se corrigieron las observaciones. De faltar algo o no ser lo requerido, por favor enviame las observaciones nuevamente
+- Ejecicio __'generador de contraseñas'__: Correccion en la lista por defecto, solo debe contemplar mayusculas, minusculas y numeros, sin caracteres especiales.
