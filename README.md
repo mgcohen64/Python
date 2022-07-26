@@ -60,3 +60,5 @@ registro).
 # Correcciones
 
 - Ejecicio __'generador de contraseñas'__: Correccion en la lista por defecto, solo debe contemplar mayusculas, minusculas y numeros, sin caracteres especiales.
+
+Realizado !!!
