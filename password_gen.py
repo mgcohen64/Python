@@ -27,7 +27,6 @@ if numeros == "s" or numeros == "S":
 if especiales == "s" or especiales == "S":
     lista = lista + listaespeciales
 if (minusculas != "s" or minusculas !="S") and (mayusculas != "s" or mayusculas !="S") and (especiales != "s" or especiales !="S") and (numeros != "s" or numeros !="S"):
-    # Aqui solo debe contemprar mayusculas, minusculas y numeros, sin los caracteres especiales
     lista = listaminusculas + listamayusculas + listanumeros
     
 for i in range (1,longitud,1):
